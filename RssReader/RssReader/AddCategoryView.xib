@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddCategoryView">
+            <rect key="frame" x="0.0" y="0.0" width="222" height="198"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure add this category?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOT-Ch-sf1">
+                    <rect key="frame" x="21" y="36" width="181" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="67" id="WMR-V3-HHK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ib-Lq-Zjg">
+                    <rect key="frame" x="0.0" y="150" width="222" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-Fe-coI">
+                            <rect key="frame" x="8" y="3" width="104" height="45"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="No">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="30t-U9-1Rx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-eN-9L6">
+                            <rect key="frame" x="114" y="3" width="108" height="45"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Yes i'm sure">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="saveSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="v9U-Ek-e8u"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.52941176470588236" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="6iD-Fe-coI" firstAttribute="top" secondItem="3ib-Lq-Zjg" secondAttribute="top" constant="3" id="7GS-XY-gf0"/>
+                        <constraint firstAttribute="bottom" secondItem="pCW-eN-9L6" secondAttribute="bottom" id="7vg-LF-mtT"/>
+                        <constraint firstItem="pCW-eN-9L6" firstAttribute="leading" secondItem="6iD-Fe-coI" secondAttribute="trailing" constant="2" id="8g2-9u-diY"/>
+                        <constraint firstAttribute="bottom" secondItem="6iD-Fe-coI" secondAttribute="bottom" id="A8g-ET-NCi"/>
+                        <constraint firstItem="6iD-Fe-coI" firstAttribute="width" secondItem="pCW-eN-9L6" secondAttribute="width" constant="-4" id="CAf-Lg-I9e"/>
+                        <constraint firstAttribute="height" constant="48" id="IUD-h0-BLO"/>
+                        <constraint firstItem="6iD-Fe-coI" firstAttribute="leading" secondItem="3ib-Lq-Zjg" secondAttribute="leading" constant="8" id="VPR-fb-VcI"/>
+                        <constraint firstAttribute="trailing" secondItem="pCW-eN-9L6" secondAttribute="trailing" id="sqm-F7-MXG"/>
+                        <constraint firstItem="pCW-eN-9L6" firstAttribute="top" secondItem="3ib-Lq-Zjg" secondAttribute="top" constant="3" id="uD1-mQ-DOE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NOT-Ch-sf1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="36" id="66s-hE-avg"/>
+                <constraint firstItem="3ib-Lq-Zjg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6df-XQ-nHG"/>
+                <constraint firstAttribute="bottom" secondItem="3ib-Lq-Zjg" secondAttribute="bottom" id="bzl-pK-YRu"/>
+                <constraint firstItem="NOT-Ch-sf1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="epS-5Y-xpF"/>
+                <constraint firstAttribute="trailing" secondItem="3ib-Lq-Zjg" secondAttribute="trailing" id="gJB-en-dbK"/>
+                <constraint firstAttribute="trailing" secondItem="NOT-Ch-sf1" secondAttribute="trailing" constant="20" id="rCg-DP-Rdn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-132" y="-500"/>
+        </view>
+    </objects>
+</document>
